@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Portfolio in Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "file": "${workspaceFolder}/.vscode/index.html",
+      "webRoot": "${workspaceFolder}/.vscode"
+    }
+  ]
+}
