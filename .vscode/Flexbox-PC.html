@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jason Marsden | Flexbox PC Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #eafafc;
+      color: #111111;
+      line-height: 1.6;
+    }
+
+    .page-header {
+      background-color: #00bcd4;
+      color: #ffffff;
+      padding: 24px 20px;
+      border-bottom: 4px solid #000000;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .site-nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px 40px;
+    }
+
+    .intro-card {
+      background-color: #ffffff;
+      border: 3px solid #000000;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .intro-card h2 {
+      margin-top: 0;
+      color: #00bcd4;
+    }
+
+    .content-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .column {
+      flex: 1 1 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #f2fcfd;
+      border: 2px solid #00bcd4;
+      padding: 18px;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #007c91;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .card a {
+      color: #007c91;
+      word-break: break-word;
+    }
+
+    footer {
+      background-color: #000000;
+      color: #ffffff;
+      text-align: center;
+      padding: 16px 20px;
+    }
+
+    footer p {
+      margin: 0;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-content">
+      <h1>Jason Marsden</h1>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="Projects.html">Projects</a>
+        <a href="About.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro-card">
+      <h2>About Me</h2>
+      <p>I am Jason Marsden, an Information Technology student. I want to find my way into the IT field and become a successful IT professional. I am currently pursuing a degree in Information Technology and have a strong interest in technology and problem-solving. I am eager to learn and grow in this field, and I am committed to developing my skills and knowledge to achieve my career goals.</p>
+    </section>
+
+    <section class="content-grid">
+      <div class="column">
+        <article class="card">
+          <h3>My Skills</h3>
+          <ul>
+            <li>Tech Support Fundamentals</li>
+            <li>Customer Service</li>
+            <li>Problem Solving</li>
+            <li>Communication</li>
+            <li>Data Analysis</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Projects</h3>
+          <p>HTML Website for Campus.edu Assignment</p>
+          <p>This project was created as part of a Web Development assignment for Campus.edu. It demonstrates my ability to create a basic HTML website and showcase web development and design skills.</p>
+        </article>
+      </div>
+
+      <div class="column">
+        <article class="card">
+          <h3>Other Projects</h3>
+          <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Contact Information</h3>
+          <p>Email: jmarsden@my.campus.edu</p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/jason-marsden-1817a7401/">https://www.linkedin.com/in/jason-marsden-1817a7401/</a></p>
+          <p>GitHub: <a href="https://github.com/nWTeK-IT/My-Portfolio">https://github.com/nWTeK-IT/My-Portfolio</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Jason Marsden</p>
+  </footer>
+</body>
+</html>
