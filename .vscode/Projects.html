@@ -3,31 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jason Marsden's project highlights and portfolio work.">
   <title>Projects</title>
   <link rel="stylesheet" href="Scheme.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="page-header">
-    <h1>Projects</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="Projects.html">Projects</a>
-      <a href="About.html">About</a>
-    </nav>
+    <div class="header-content">
+      <a class="brand-link" href="index.html"><h1>Projects</h1></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="Projects.html" aria-current="page">Projects</a>
+        <a href="About.html">About</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="info-box">
-      <h2>HTML Website for Campus.edu Assignment</h2>
-      <p>This project was created as part of a Web Development assignment for Campus.edu. It demonstrates my ability to create a basic HTML website, showcasing my skills in web development and design.</p>
+  <main id="main-content" class="container">
+    <section class="hero-card" aria-labelledby="project-heading">
+      <h2 id="project-heading">Selected Projects</h2>
+      <div class="card-list">
+        <article class="card">
+          <h3>Campus.edu Web Design</h3>
+          <p>This assignment focused on building a clear, accessible website structure with thoughtful layout and strong readability.</p>
+        </article>
+        <article class="card">
+          <h3>IT Support Portfolio</h3>
+          <p>I organized this portfolio to highlight my technical interests, communication strengths, and hands-on learning in IT.</p>
+        </article>
+        <article class="card">
+          <h3>Accessibility Practice</h3>
+          <p>I refined this site to improve navigation, contrast, labels, and form usability for a wider range of users.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Other Projects</h2>
+    <section class="card" aria-labelledby="other-projects-heading">
+      <h2 id="other-projects-heading">Other Projects</h2>
       <ul>
-        <li>Project 1</li>
-        <li>Project 2</li>
-        <li>Project 3</li>
+        <li>System troubleshooting walkthroughs</li>
+        <li>Customer support communication samples</li>
+        <li>Web development practice exercises</li>
       </ul>
     </section>
   </main>

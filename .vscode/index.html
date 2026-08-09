@@ -3,36 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jason Marsden's accessible IT portfolio and project showcase.">
   <title>My IT Portfolio</title>
   <link rel="stylesheet" href="Scheme.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="page-header">
-    <h1>NWTeks Workshop & Portfolio</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="Projects.html">Projects</a>
-      <a href="About.html">About</a>
-    </nav>
+    <div class="header-content">
+      <a class="brand-link" href="index.html"><h1>NWTeks Workshop & Portfolio</h1></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="Projects.html">Projects</a>
+        <a href="About.html">About</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="info-box">
-      <h2>My Skills</h2>
-      <ul>
-        <li>Tech Support Fundamentals</li>
-        <li>Customer Service</li>
-        <li>Problem Solving</li>
-        <li>Communication</li>
-        <li>Data Analysis</li>
-      </ul>
+  <main id="main-content" class="container">
+    <section class="hero-card" aria-labelledby="skills-heading">
+      <div>
+        <h2 id="skills-heading">About Me</h2>
+        <p>I am Jason Marsden, an Information Technology student. I want to find my way into the IT field and become a successful IT professional.</p>
+      </div>
+      <div>
+        <h2>My Skills</h2>
+        <ul>
+          <li>Tech Support Fundamentals</li>
+          <li>Customer Service</li>
+          <li>Problem Solving</li>
+          <li>Communication</li>
+          <li>Data Analysis</li>
+        </ul>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Information</h2>
-      <p>Email: jmarsden@my.campus.edu</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/jason-marsden-1817a7401/">https://www.linkedin.com/in/jason-marsden-1817a7401/</a></p>
-      <p>GitHub: <a href="https://github.com/nWTeK-IT/My-Portfolio">https://github.com/nWTeK-IT/My-Portfolio</a></p>
+    <section class="content-grid" aria-label="Portfolio highlights">
+      <article class="card">
+        <h2>Projects</h2>
+        <p>This portfolio showcases my web development and design work, with a focus on accessible and responsive layouts.</p>
+      </article>
+      <article class="card" id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Information</h2>
+        <div class="contact-list">
+          <p>Email: <a href="mailto:jmarsden@my.campus.edu">jmarsden@my.campus.edu</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/jason-marsden-1817a7401/" target="_blank" rel="noreferrer">Jason Marsden</a></p>
+          <p>GitHub: <a href="https://github.com/nWTeK-IT/My-Portfolio" target="_blank" rel="noreferrer">nWTeK-IT/My-Portfolio</a></p>
+        </div>
+      </article>
     </section>
   </main>
 

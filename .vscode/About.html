@@ -3,29 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Jason Marsden and a contact form for reaching out.">
     <title>About Me</title>
     <link rel="stylesheet" href="Scheme.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="page-header">
-        <h1>About Me</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="Projects.html">Projects</a>
-            <a href="About.html">About</a>
-        </nav>
+        <div class="header-content">
+            <a class="brand-link" href="index.html"><h1>About Me</h1></a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="Projects.html">Projects</a>
+                <a href="About.html" aria-current="page">About</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="info-box">
-            <h2>I am Jason Marsden, an Information Technology student</h2>
+    <main id="main-content" class="container">
+        <section class="hero-card" aria-labelledby="about-heading">
+            <h2 id="about-heading">I am Jason Marsden, an Information Technology student</h2>
             <p>I want to find my way into the IT field and become a successful IT professional. I am currently pursuing a degree in Information Technology and have a strong interest in technology and problem-solving. I am eager to learn and grow in this field, and I am committed to developing my skills and knowledge to achieve my career goals.</p>
+        </section>
+
+        <section class="card" aria-labelledby="contact-form-heading">
+            <h2 id="contact-form-heading">Contact Jason</h2>
+            <p>Please use the form below to get in touch about projects, internships, or IT questions.</p>
+            <form id="contact-form" novalidate>
+                <div class="form-row">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name" required aria-required="true" aria-describedby="name-error">
+                    <p class="error-message" id="name-error" role="alert"></p>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error">
+                    <p class="error-message" id="email-error" role="alert"></p>
+                </div>
+
+                <fieldset>
+                    <legend>Preferred contact method</legend>
+                    <div class="radio-group">
+                        <label><input type="radio" name="contact-method" value="email" checked> Email</label>
+                        <label><input type="radio" name="contact-method" value="phone"> Phone</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-row">
+                    <label for="reason">Reason for reaching out</label>
+                    <select id="reason" name="reason" required aria-required="true" aria-describedby="reason-error">
+                        <option value="">Select one</option>
+                        <option value="project">Project discussion</option>
+                        <option value="internship">Internship opportunity</option>
+                        <option value="advice">Career advice</option>
+                    </select>
+                    <p class="error-message" id="reason-error" role="alert"></p>
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="message-error"></textarea>
+                    <p class="error-message" id="message-error" role="alert"></p>
+                </div>
+
+                <button type="submit">Send message</button>
+                <p class="form-status" id="form-status" aria-live="polite">All fields are required.</p>
+            </form>
         </section>
     </main>
 
     <footer>
         <p>© 2026 Jason Marsden</p>
     </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+
+        function clearErrors() {
+            document.querySelectorAll('.error-message').forEach(function (message) {
+                message.textContent = '';
+            });
+            document.querySelectorAll('[aria-invalid="true"]').forEach(function (input) {
+                input.removeAttribute('aria-invalid');
+            });
+        }
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            clearErrors();
+
+            let valid = true;
+            const fields = [
+                { id: 'name', message: 'Please enter your full name.' },
+                { id: 'email', message: 'Please enter a valid email address.' },
+                { id: 'reason', message: 'Please choose a reason for contacting me.' },
+                { id: 'message', message: 'Please share a short message.' }
+            ];
+
+            fields.forEach(function (field) {
+                const input = document.getElementById(field.id);
+                if (!input.value.trim()) {
+                    input.setAttribute('aria-invalid', 'true');
+                    document.getElementById(field.id + '-error').textContent = field.message;
+                    valid = false;
+                }
+            });
+
+            const emailField = document.getElementById('email');
+            if (emailField.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+                emailField.setAttribute('aria-invalid', 'true');
+                document.getElementById('email-error').textContent = 'Please enter a valid email address.';
+                valid = false;
+            }
+
+            if (valid) {
+                status.textContent = 'Thank you for your message. Your request has been received.';
+                status.classList.add('success');
+                form.reset();
+            } else {
+                status.textContent = 'Please fix the highlighted fields and try again.';
+                status.classList.remove('success');
+            }
+        });
+    </script>
 </body>
 </html>
-    
