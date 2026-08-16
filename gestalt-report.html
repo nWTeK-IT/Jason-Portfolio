@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestalt Website Review</title>
+    <style>
+      @page {
+        margin: 0.7in;
+        size: A4 portrait;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: #f6f4f1;
+        color: #1d1d1d;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      .page {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 18px 0 30px;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 0 0 22px;
+        font-size: 30px;
+        font-weight: normal;
+      }
+
+      h2 {
+        margin: 30px 0 12px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #d7d7d7;
+        font-size: 22px;
+        font-weight: normal;
+      }
+
+      .image-box {
+        position: relative;
+        margin: 12px 0 18px;
+        border: 1px solid #d7d7d7;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      }
+
+      .image-box img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .callout {
+        position: absolute;
+        z-index: 2;
+        max-width: 210px;
+        background: rgba(255,255,255,0.96);
+        border: 2px solid #2f6fae;
+        border-radius: 10px;
+        padding: 7px 8px;
+        font-size: 12px;
+        line-height: 1.25;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+      }
+
+      .callout::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
+
+      .callout.left::after {
+        right: -12px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-width: 10px 0 10px 12px;
+        border-color: transparent transparent transparent #2f6fae;
+      }
+
+      .callout.right::after {
+        left: -12px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-width: 10px 12px 10px 0;
+        border-color: transparent #2f6fae transparent transparent;
+      }
+
+      .callout.top::after {
+        left: 50%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        border-width: 12px 10px 0 10px;
+        border-color: #2f6fae transparent transparent transparent;
+      }
+
+      .label {
+        color: #1e4d7b;
+      }
+
+      p {
+        margin: 10px 0;
+        font-size: 14px;
+      }
+
+      .footer {
+        margin-top: 28px;
+        text-align: center;
+        font-size: 12px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <h1>Gestalt Principles Website Review</h1>
+
+      <h2>Apple</h2>
+      <div class="image-box">
+        <img src="apple_manual.png" alt="Apple homepage screenshot" />
+        <div class="callout left" style="left: 15%; top: 18%;"><span class="label">Proximity</span><br />The headline and button are grouped together as one clear action.</div>
+        <div class="callout right" style="left: 58%; top: 62%;"><span class="label">Similarity</span><br />The repeated button shape and spacing make the design feel organized.</div>
+        <div class="callout top" style="left: 40%; top: 8%;"><span class="label">Figure-ground</span><br />The product message stands out clearly against the muted background.</div>
+      </div>
+
+      <p>Apple is a strong example of good Gestalt design because it helps the eye understand the page quickly. The first principle at work is proximity. The headline, supporting text, and main button sit close together, so they feel like one clear message rather than separate pieces. This reduces mental effort because the user does not have to sort through unrelated content to understand the page. The page feels calm and intentional, which makes the experience smoother.</p>
+
+      <p>The second principle is similarity. The repeated button shapes, spacing, and product-card style create a visual pattern that feels organized. Because similar elements look alike, the user can tell what is important and what is interactive without much effort. This makes navigation easy and reduces confusion. The layout also uses figure-ground well, because the hero product stands apart from the quieter background. That gives the user a clear focal point and helps the message land immediately.</p>
+
+      <p>Overall, Apple does a good job guiding attention. The page feels clean, premium, and simple. It helps people understand the offer quickly and take the next step without having to work too hard.</p>
+
+      <h2>Craigslist</h2>
+      <div class="image-box">
+        <img src="craigslist_manual.png" alt="Craigslist homepage screenshot" />
+        <div class="callout left" style="left: 11%; top: 24%;"><span class="label">Proximity</span><br />The category links are packed together with very little separation.</div>
+        <div class="callout right" style="left: 58%; top: 20%;"><span class="label">Similarity</span><br />Many links look nearly the same, so the page feels crowded.</div>
+        <div class="callout top" style="left: 68%; top: 56%;"><span class="label">Closure</span><br />The dense text creates a cluttered block that is hard to read.</div>
+      </div>
+
+      <p>Craigslist is a useful example of how weak Gestalt design can hurt usability. One problem is proximity. The category links are packed closely together with very little spacing, so the eye struggles to tell what belongs together. Instead of feeling like organized groups, the page looks like one large block of text. That slows users down and makes scanning harder than it should be.</p>
+
+      <p>The second issue is similarity. Many links share the same size, weight, and spacing, so they look almost identical. When elements are too similar, it is harder to tell one section from another. This creates more reading and less fast recognition. The layout also weakens closure, because the dense arrangement does not give the page clear chunks of information. The result is a cluttered, unfinished feeling that makes the experience harder to navigate.</p>
+
+      <p>In practical terms, Craigslist still works functionally, but it does not guide the eye well. People have to decode the layout before they can act. That makes the experience slower and less confident. Apple uses Gestalt principles to create clarity, while Craigslist shows how poor grouping and spacing can make even basic browsing feel harder than it needs to be.</p>
+
+      <div class="footer">Review based on two real websites and their use of visual grouping.</div>
+    </div>
+  </body>
+</html>
