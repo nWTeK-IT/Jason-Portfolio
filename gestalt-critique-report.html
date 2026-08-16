@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestalt Critique Report</title>
+    <style>
+      @page {
+        margin: 0.6in;
+        size: A4 portrait;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #1f1f1f;
+        background: #f9f9f9;
+        line-height: 1.5;
+      }
+
+      .container {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 16px 0 30px;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 0 0 28px;
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin: 24px 0 10px;
+        border-bottom: 2px solid #d9d9d9;
+        padding-bottom: 6px;
+      }
+
+      .section {
+        page-break-inside: avoid;
+        margin-bottom: 32px;
+      }
+
+      .annotated {
+        position: relative;
+        width: 100%;
+        margin: 18px 0 12px;
+        border: 1px solid #d7d7d7;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      }
+
+      .annotated img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .callout {
+        position: absolute;
+        z-index: 2;
+        min-width: 140px;
+        max-width: 220px;
+        background: rgba(255,255,255,0.95);
+        border: 2px solid #2d6cdf;
+        border-radius: 12px;
+        padding: 8px 10px;
+        font-size: 12px;
+        line-height: 1.2;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      }
+
+      .callout::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
+
+      .callout.left::after {
+        top: 50%;
+        right: -12px;
+        transform: translateY(-50%);
+        border-width: 10px 0 10px 12px;
+        border-color: transparent transparent transparent #2d6cdf;
+      }
+
+      .callout.right::after {
+        top: 50%;
+        left: -12px;
+        transform: translateY(-50%);
+        border-width: 10px 12px 10px 0;
+        border-color: transparent #2d6cdf transparent transparent;
+      }
+
+      .callout.top::after {
+        left: 50%;
+        bottom: -12px;
+        transform: translateX(-50%);
+        border-width: 12px 10px 0 10px;
+        border-color: #2d6cdf transparent transparent transparent;
+      }
+
+      .callout .label {
+        font-weight: 700;
+        color: #1d4e89;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 8px 0 8px;
+      }
+
+      .good {
+        color: #1a3b2b;
+      }
+
+      .bad {
+        color: #592d2d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gestalt Principles Website Critique</h1>
+
+      <div class="section">
+        <h2>1. Effective Example: Apple</h2>
+        <div class="annotated">
+          <img src="apple.png" alt="Apple homepage screenshot with annotations" />
+          <div class="callout left" style="left: 16%; top: 16%;"><span class="label">Proximity</span><br />The headline, supporting text, and CTA are grouped tightly.</div>
+          <div class="callout right" style="left: 58%; top: 65%;"><span class="label">Similarity</span><br />Repeating shape, color, and spacing make the call-to-action feel unified.</div>
+          <div class="callout top" style="left: 41%; top: 8%;"><span class="label">Figure-ground</span><br />The hero message stands apart from the soft gray background.</div>
+        </div>
+        <p class="good">Apple uses Gestalt principles to create a calm, premium shopping experience. The most effective principle is <strong>proximity</strong>: the headline, subheading, and button are placed in a compact visual cluster, which makes the user understand that these elements belong together as one decision point. This reduces cognitive effort because the eye naturally reads the offer as a single message rather than isolated fragments. The space around the hero section also creates a clear figure-ground separation, letting the product message dominate the page while the surrounding gray field acts as a quiet backdrop.</p>
+        <p class="good">The site also applies <strong>similarity</strong> well. The shop button repeats the same rounded, blue treatment seen in other brand actions, so users quickly understand it as a primary click target. The consistent spacing and typography across the section reinforce hierarchy without clutter. This helps the user experience because the page guides attention smoothly from headline to action, rather than forcing the eye to scan randomly. In practical terms, Apple reduces friction by making the next step obvious and visually consistent.</p>
+        <p class="good">Overall, the page feels intentional and highly legible. The Gestalt principles support clarity, trust, and motionless focus, which matches Apple’s brand and helps users convert without confusion.</p>
+      </div>
+
+      <div class="section">
+        <h2>2. Weak Example: Craigslist</h2>
+        <div class="annotated">
+          <img src="craigslist.png" alt="Craigslist homepage screenshot with annotations" />
+          <div class="callout left" style="left: 13%; top: 23%;"><span class="label">Proximity</span><br />Labels and links are packed tightly without clear grouping.</div>
+          <div class="callout right" style="left: 55%; top: 17%;"><span class="label">Similarity</span><br />The list items look almost identical, reducing distinct categories.</div>
+          <div class="callout top" style="left: 66%; top: 58%;"><span class="label">Closure / clutter</span><br />Dense text builds a visually noisy and unfinished field.</div>
+        </div>
+        <p class="bad">Craigslist demonstrates how poor use of Gestalt principles can break usability. One major issue is <strong>proximity</strong>. The navigation items, category names, and spacing are compressed into a dense set of text blocks without enough separation, so the eye struggles to tell what belongs together. Instead of grouping logically, the content feels like one long wall of labels. This hurts the user experience because people must work harder to parse where to click and what each cluster is meant to represent.</p>
+        <p class="bad">The site also weakens <strong>similarity</strong>. Many listing categories share the same size, weight, and spacing, so they appear nearly indistinguishable. Because the interface lacks stronger contrast or shape differences, the user cannot quickly scan the page by visual patterns. This reduces efficiency and makes the page feel dated and visually noisy. Similarly, the dense layout undermines closure: the page does not create clear “chunks” of information, so users perceive it as clutter rather than structured content.</p>
+        <p class="bad">The result is a design that is functional but not friendly. The lack of hierarchy and weak grouping makes people search slower and feel less confident about navigation. In a highly task-oriented site, that is a serious usability problem because the user is forced to spend mental energy decoding the layout instead of finding what they need.</p>
+      </div>
+    </div>
+  </body>
+</html>
