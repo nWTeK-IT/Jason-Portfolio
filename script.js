@@ -142,3 +142,68 @@ if (adviceBtn) {
 	});
 }
 
+// ---- Additional interactions to meet new requirements ----
+
+// 1) Button changes content
+const changeTextBtn = document.getElementById('change-text-btn');
+const dynamicText = document.getElementById('dynamic-text');
+if (changeTextBtn && dynamicText) {
+	changeTextBtn.addEventListener('click', () => {
+		dynamicText.textContent = 'Text updated! You clicked the button.';
+	});
+}
+
+// 2) Style changes on input (live color preview)
+const colorPicker = document.getElementById('color-picker');
+const colorPreview = document.getElementById('color-preview');
+if (colorPicker && colorPreview) {
+	// update preview instantly while the user interacts
+	colorPicker.addEventListener('input', (e) => {
+		const color = e.target.value;
+		colorPreview.style.backgroundColor = color;
+		// ensure preview text remains readable by toggling text color
+		const dark = (parseInt(color.slice(1), 16) < 0xffffff / 2);
+		colorPreview.style.color = dark ? '#fff' : '#000';
+	});
+}
+
+// 3) Dynamic list: add items (createElement + appendChild) and remove
+const addItemBtn = document.getElementById('add-item');
+const itemInput = document.getElementById('item-input');
+const itemList = document.getElementById('item-list');
+
+function createListItem(text) {
+	const li = document.createElement('li');
+	li.textContent = text + ' ';
+
+	const removeBtn = document.createElement('button');
+	removeBtn.type = 'button';
+	removeBtn.textContent = 'Remove';
+	removeBtn.addEventListener('click', () => {
+		li.remove();
+	});
+
+	li.appendChild(removeBtn);
+	return li;
+}
+
+if (addItemBtn && itemInput && itemList) {
+	addItemBtn.addEventListener('click', () => {
+		const value = itemInput.value.trim();
+		if (!value) return;
+		const li = createListItem(value);
+		itemList.appendChild(li);
+		itemInput.value = '';
+		itemInput.focus();
+	});
+
+	// Also allow Enter key on the input to add
+	itemInput.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter') {
+			e.preventDefault();
+			addItemBtn.click();
+		}
+	});
+}
+
+

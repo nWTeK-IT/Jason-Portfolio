@@ -257,6 +257,31 @@
           <div id="advice-output"></div>
         </div>
       </section>
+
+      <section id="interactions" aria-labelledby="interactions-heading">
+        <h2 id="interactions-heading">Interactive demos</h2>
+
+        <div class="interaction-block">
+          <h3>1. Button changes content</h3>
+          <p id="dynamic-text">This text will change when you click the button.</p>
+          <button id="change-text-btn">Change text</button>
+        </div>
+
+        <div class="interaction-block">
+          <h3>2. Live style change</h3>
+          <label for="color-picker">Pick a background color:</label>
+          <input id="color-picker" type="color" value="#ffffff" />
+          <div id="color-preview" style="width:100%;height:48px;border:1px solid #ddd;margin-top:8px;">Preview area</div>
+        </div>
+
+        <div class="interaction-block">
+          <h3>3. Dynamic list (add & remove)</h3>
+          <label for="item-input">New item</label>
+          <input id="item-input" type="text" placeholder="Type item and press Add" />
+          <button id="add-item">Add</button>
+          <ul id="item-list" aria-live="polite"></ul>
+        </div>
+      </section>
     </div>
     <script src="script.js"></script>
   </body>
