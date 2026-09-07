@@ -32,10 +32,12 @@ if (navToggle && primaryNav) {
 const form = document.getElementById('contact-form');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
+const phoneInput = document.getElementById('phone');
 const messageInput = document.getElementById('message');
 
 const nameError = document.getElementById('name-error');
 const emailError = document.getElementById('email-error');
+const phoneError = document.getElementById('phone-error');
 const messageError = document.getElementById('message-error');
 const formSuccess = document.getElementById('form-success');
 
@@ -60,6 +62,7 @@ if (form) {
 		let valid = true;
 		clearError(nameError);
 		clearError(emailError);
+		clearError(phoneError);
 		clearError(messageError);
 		formSuccess.textContent = '';
 
@@ -81,6 +84,14 @@ if (form) {
 			valid = false;
 		} else {
 			emailInput.removeAttribute('aria-invalid');
+		}
+
+		if (!phoneInput.value.trim()) {
+			showError(phoneError, 'Please enter your phone number.');
+			phoneInput.setAttribute('aria-invalid', 'true');
+			valid = false;
+		} else {
+			phoneInput.removeAttribute('aria-invalid');
 		}
 
 		// message is optional but show a short warning if too short
@@ -105,7 +116,7 @@ if (form) {
 	});
 
 	// Clear field errors on input
-	[[nameInput, nameError], [emailInput, emailError], [messageInput, messageError]].forEach(([input, err]) => {
+	[[nameInput, nameError], [emailInput, emailError], [phoneInput, phoneError], [messageInput, messageError]].forEach(([input, err]) => {
 		input.addEventListener('input', () => {
 			clearError(err);
 			input.removeAttribute('aria-invalid');
