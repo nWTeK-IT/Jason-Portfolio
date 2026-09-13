@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jason Marsden's design and web development portfolio." />
+    <title>Jason Marsden | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="index.html" aria-label="Jason Marsden home">JM<span>.</span></a>
+        <nav aria-label="Primary navigation">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="gestalt-report.html">Case study</a>
+          <a href="mailto:jason@example.com">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Web design · interaction · visual systems</p>
+          <h1 id="intro-title">Thoughtful digital work with a human pulse.</h1>
+          <p class="hero-summary">I’m Jason, a developing web designer who enjoys turning research, structure, and visual curiosity into clear online experiences.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="gestalt-report.html">View my case study</a>
+            <a class="text-link" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="hero-mark" aria-label="Abstract composition representing connected ideas" role="img">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="mark-core">make<br />meaning</div>
+        </div>
+      </section>
+
+      <section id="work" class="work-section" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">A small portfolio, built with intention.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card project-card-featured">
+            <p class="project-number">01 / Research + critique</p>
+            <h3>Gestalt Principles Website Review</h3>
+            <p>A visual analysis of how proximity, similarity, figure-ground, and closure shape the way people scan a page.</p>
+            <a class="card-link" href="gestalt-report.html">Read the full review <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card project-card-secondary">
+            <p class="project-number">02 / Responsive systems</p>
+            <h3>Layout across every screen</h3>
+            <p>Exploring flexible grids, readable type, and mobile-first decisions that keep content useful at any size.</p>
+            <span class="status-label">In progress</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">Working principles</p>
+          <h2 id="about-title">Good design gives people room to think.</h2>
+        </div>
+        <div class="principles">
+          <p><strong>01</strong> Start with the person, not the decoration.</p>
+          <p><strong>02</strong> Make the important thing easy to find.</p>
+          <p><strong>03</strong> Test the idea in the real world.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Jason Marsden</p>
+      <a href="gestalt-report.html">Continue to the case study <span aria-hidden="true">→</span></a>
+    </footer>
+  </body>
+</html>
