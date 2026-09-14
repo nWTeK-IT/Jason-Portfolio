@@ -4,28 +4,18 @@
     {
       "label": "Serve portfolio",
       "type": "shell",
-      "command": "python",
-      "args": ["-m", "http.server", "8000"],
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\serve.ps1"
+      ],
       "options": {
-        "cwd": "${workspaceFolder}/.vscode"
+        "cwd": "${workspaceFolder}"
       },
       "isBackground": true,
-      "problemMatcher": [
-        {
-          "owner": "http-server",
-          "pattern": {
-            "regexp": ".*",
-            "file": 1,
-            "location": 2,
-            "message": 0
-          },
-          "background": {
-            "activeOnStart": true,
-            "beginsPattern": ".*",
-            "endsPattern": "Serving HTTP on"
-          }
-        }
-      ]
+      "problemMatcher": []
     }
   ]
 }
