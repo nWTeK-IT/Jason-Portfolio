@@ -36,6 +36,8 @@ h3 { margin: 0 0 16px; font-size: 1.55rem; }
 .button-primary { color: var(--cream); background: var(--ink); }
 .button-primary:hover, .button-primary:focus-visible { background: var(--coral); }
 .text-link, .card-link, .site-footer a { font-weight: 700; text-decoration: none; }
+.about-link { display: inline-block; margin-top: 24px; color: var(--cream); font-weight: 700; text-decoration: none; }
+.about-link:hover, .about-link:focus-visible { color: var(--coral); }
 .hero-mark { position: relative; min-height: 360px; border: 1px solid var(--ink); background: var(--blue); overflow: hidden; }
 .mark-core { position: absolute; top: 50%; left: 50%; z-index: 1; transform: translate(-50%, -50%); color: var(--cream); font-size: clamp(1.7rem, 4vw, 3rem); font-weight: 800; line-height: .95; text-align: center; }
 .orbit { position: absolute; border: 1px solid var(--cream); border-radius: 50%; transform: rotate(-25deg); }
@@ -60,6 +62,39 @@ h3 { margin: 0 0 16px; font-size: 1.55rem; }
 .site-footer a { color: var(--blue); }
 :focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
 
+.page-intro, .about-content, .contact-section, .projects-list { max-width: 1180px; margin: auto; padding: 105px 6vw; }
+.page-intro { border-bottom: 1px solid var(--line); }
+.page-intro h1 { max-width: 900px; }
+.intro-copy { max-width: 620px; margin: 30px 0 0; font-size: 1.15rem; }
+.about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.about-content h2 { max-width: 540px; }
+.skill-list { border-top: 1px solid var(--line); }
+.skill-list p { margin: 0; padding: 18px 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+.skill-list strong { display: inline-block; width: 45px; color: var(--coral); font: 500 .75rem var(--mono); }
+.contact-section { display: flex; align-items: end; justify-content: space-between; gap: 40px; color: var(--cream); background: var(--blue); }
+.contact-section h2 { max-width: 680px; }
+.contact-section p:not(.eyebrow) { max-width: 560px; }
+.contact-section .button-primary { background: var(--cream); color: var(--ink); flex: 0 0 auto; }
+.contact-section .button-primary:hover, .contact-section .button-primary:focus-visible { color: var(--cream); background: var(--ink); }
+.contact-form-section { max-width: 1180px; margin: auto; padding: 105px 6vw; display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; }
+.contact-form-section h2 { max-width: 450px; }
+.contact-direct a { color: var(--blue); font-weight: 700; }
+.portfolio-form { display: grid; gap: 8px; }
+.portfolio-form label { margin-top: 10px; font: 500 .72rem var(--mono); text-transform: uppercase; }
+.portfolio-form label span { color: #666; font-family: var(--sans); text-transform: none; }
+.portfolio-form input, .portfolio-form textarea { width: 100%; padding: 13px 14px; border: 1px solid var(--ink); border-radius: 0; background: var(--cream); color: var(--ink); font: 1rem var(--sans); }
+.portfolio-form textarea { resize: vertical; }
+.portfolio-form .button { border: 0; cursor: pointer; justify-self: start; margin-top: 12px; }
+.form-error { min-height: 1.2em; margin: 0; color: var(--coral); font-size: .85rem; }
+.form-success { color: var(--blue); font-weight: 700; }
+.projects-list { display: grid; gap: 18px; }
+.project-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; min-height: 245px; padding: 32px; border: 1px solid var(--ink); background: var(--cream); }
+.project-detail h2 { max-width: 480px; font-size: clamp(1.8rem, 3.5vw, 3rem); }
+.project-detail p:not(.project-number) { max-width: 520px; }
+.project-detail-featured { color: var(--cream); background: var(--coral); }
+.project-detail-featured .project-number { color: var(--ink); }
+.project-detail .card-link { display: inline-block; margin-top: 20px; }
+
 @media (max-width: 700px) {
   .site-header-inner { align-items: flex-start; }
   nav { flex-wrap: wrap; justify-content: flex-end; gap: 8px 14px; }
@@ -69,5 +104,9 @@ h3 { margin: 0 0 16px; font-size: 1.55rem; }
   .hero-mark { min-height: 270px; }
   .project-grid, .about-section { grid-template-columns: 1fr; }
   .project-card { min-height: 280px; }
+  .page-intro, .about-content, .contact-section, .projects-list { padding: 72px 7vw; }
+  .about-content, .project-detail { grid-template-columns: 1fr; gap: 32px; }
+  .contact-section { align-items: flex-start; flex-direction: column; }
+  .contact-form-section { grid-template-columns: 1fr; gap: 42px; padding: 72px 7vw; }
   .site-footer { align-items: flex-start; flex-direction: column; padding: 28px 7vw; }
 }

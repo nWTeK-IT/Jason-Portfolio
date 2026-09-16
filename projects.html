@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Selected web design, accessibility, and IT projects by Jason Marsden." />
+    <title>Work | Jason Marsden</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="index.html" aria-label="Jason Marsden home">JM<span>.</span></a>
+        <nav aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html" aria-current="page">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-intro" aria-labelledby="projects-title">
+        <p class="eyebrow">Selected work</p>
+        <h1 id="projects-title">A growing body of work in web design and technology.</h1>
+        <p class="intro-copy">These projects show how I research a problem, organize information, and turn an idea into a clear experience.</p>
+      </section>
+
+      <section class="projects-list" aria-label="Project list">
+        <article class="project-detail project-detail-featured">
+          <div>
+            <p class="project-number">01 / Research + critique</p>
+            <h2>Gestalt Principles Website Review</h2>
+          </div>
+          <div>
+            <p>I compared Apple and Craigslist to study proximity, similarity, figure-ground, and closure in real interfaces. The project strengthened my visual analysis and my ability to explain why a design works.</p>
+            <a class="card-link" href="gestalt-report.html">Read the case study <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-detail">
+          <div>
+            <p class="project-number">02 / Front-end development</p>
+            <h2>Jason Marsden Portfolio</h2>
+          </div>
+          <div>
+            <p>A responsive personal site built with semantic HTML, CSS, and JavaScript. I designed the structure around a real user: an employer or client who needs to quickly understand who I am and what I can do.</p>
+            <span class="status-label">Current project</span>
+          </div>
+        </article>
+
+        <article class="project-detail">
+          <div>
+            <p class="project-number">03 / IT practice</p>
+            <h2>Technical Support &amp; Troubleshooting</h2>
+          </div>
+          <div>
+            <p>Coursework and practice focused on breaking technical problems into manageable steps, documenting solutions, and communicating clearly with the person who needs help.</p>
+            <span class="status-label">Developing skills</span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Jason Marsden</p>
+      <a href="contact.html">Start a conversation <span aria-hidden="true">→</span></a>
+    </footer>
+  </body>
+</html>

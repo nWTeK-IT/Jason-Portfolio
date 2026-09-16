@@ -86,16 +86,19 @@ if (form) {
 			emailInput.removeAttribute('aria-invalid');
 		}
 
-		if (!phoneInput.value.trim()) {
+		if (phoneInput?.hasAttribute('required') && !phoneInput.value.trim()) {
 			showError(phoneError, 'Please enter your phone number.');
 			phoneInput.setAttribute('aria-invalid', 'true');
 			valid = false;
-		} else {
+		} else if (phoneInput) {
 			phoneInput.removeAttribute('aria-invalid');
 		}
 
-		// message is optional but show a short warning if too short
-		if (messageInput.value && messageInput.value.trim().length < 5) {
+		if (messageInput.hasAttribute('required') && !messageInput.value.trim()) {
+			showError(messageError, 'Please enter a message.');
+			messageInput.setAttribute('aria-invalid', 'true');
+			valid = false;
+		} else if (messageInput.value && messageInput.value.trim().length < 5) {
 			showError(messageError, 'Message is too short.');
 			messageInput.setAttribute('aria-invalid', 'true');
 			valid = false;
