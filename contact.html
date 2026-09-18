@@ -12,7 +12,8 @@
     <header class="site-header">
       <div class="site-header-inner">
         <a class="brand" href="index.html" aria-label="Jason Marsden home">JM<span>.</span></a>
-        <nav aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+        <nav id="primary-nav" aria-label="Primary navigation">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="projects.html">Work</a>
@@ -36,19 +37,19 @@
         </div>
         <form id="contact-form" class="portfolio-form" novalidate>
           <label for="name">Name</label>
-          <input id="name" name="name" type="text" autocomplete="name" required />
+          <input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error" required />
           <p id="name-error" class="form-error" aria-live="polite"></p>
 
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required />
+          <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error" required />
           <p id="email-error" class="form-error" aria-live="polite"></p>
 
           <label for="phone">Phone <span>(optional)</span></label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel" />
+          <input id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-error" />
           <p id="phone-error" class="form-error" aria-live="polite"></p>
 
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
+          <textarea id="message" name="message" rows="6" aria-describedby="message-error" required></textarea>
           <p id="message-error" class="form-error" aria-live="polite"></p>
 
           <button class="button button-primary" type="submit">Send message</button>

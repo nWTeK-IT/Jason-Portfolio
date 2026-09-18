@@ -120,6 +120,7 @@ if (form) {
 
 	// Clear field errors on input
 	[[nameInput, nameError], [emailInput, emailError], [phoneInput, phoneError], [messageInput, messageError]].forEach(([input, err]) => {
+		if (!input) return;
 		input.addEventListener('input', () => {
 			clearError(err);
 			input.removeAttribute('aria-invalid');

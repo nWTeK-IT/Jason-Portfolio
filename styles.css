@@ -4,7 +4,7 @@
   --ink: #202321;
   --paper: #f3f0e8;
   --cream: #fffdf7;
-  --coral: #e85d45;
+  --coral: #a93828;
   --blue: #315c72;
   --line: #c8c4b8;
   --mono: 'DM Mono', monospace;
@@ -22,6 +22,7 @@ a { color: inherit; }
 .brand span, .eyebrow, .project-number { color: var(--coral); }
 nav { display: flex; gap: 28px; font-family: var(--mono); font-size: .75rem; text-transform: uppercase; }
 nav a { text-decoration: none; }
+.nav-toggle { display: none; }
 nav a:hover, nav a:focus-visible, .text-link:hover, .card-link:hover { color: var(--coral); }
 .hero, .work-section, .about-section { max-width: 1180px; margin: auto; padding: 105px 6vw; }
 .hero { min-height: 610px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); align-items: center; gap: 70px; }
@@ -83,6 +84,7 @@ h3 { margin: 0 0 16px; font-size: 1.55rem; }
 .portfolio-form label { margin-top: 10px; font: 500 .72rem var(--mono); text-transform: uppercase; }
 .portfolio-form label span { color: #666; font-family: var(--sans); text-transform: none; }
 .portfolio-form input, .portfolio-form textarea { width: 100%; padding: 13px 14px; border: 1px solid var(--ink); border-radius: 0; background: var(--cream); color: var(--ink); font: 1rem var(--sans); }
+.portfolio-form input:focus, .portfolio-form textarea:focus { outline: 3px solid var(--coral); outline-offset: 2px; }
 .portfolio-form textarea { resize: vertical; }
 .portfolio-form .button { border: 0; cursor: pointer; justify-self: start; margin-top: 12px; }
 .form-error { min-height: 1.2em; margin: 0; color: var(--coral); font-size: .85rem; }
@@ -96,8 +98,12 @@ h3 { margin: 0 0 16px; font-size: 1.55rem; }
 .project-detail .card-link { display: inline-block; margin-top: 20px; }
 
 @media (max-width: 700px) {
-  .site-header-inner { align-items: flex-start; }
-  nav { flex-wrap: wrap; justify-content: flex-end; gap: 8px 14px; }
+  .site-header-inner { align-items: flex-start; position: relative; }
+  .nav-toggle { display: block; padding: 8px 10px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font: 500 .72rem var(--mono); text-transform: uppercase; cursor: pointer; }
+  nav { position: absolute; top: calc(100% + 1px); right: 7vw; z-index: 2; display: none; min-width: 150px; padding: 10px; border: 1px solid var(--ink); background: var(--cream); box-shadow: 4px 4px 0 var(--ink); }
+  nav.show { display: grid; gap: 0; }
+  nav a { padding: 10px; }
+  .nav-toggle:focus-visible, nav a:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; }
   .hero, .work-section, .about-section { padding: 72px 7vw; }
   .hero { display: flex; flex-direction: column; align-items: stretch; gap: 48px; }
   h1 { font-size: clamp(2.9rem, 13vw, 4.8rem); }
